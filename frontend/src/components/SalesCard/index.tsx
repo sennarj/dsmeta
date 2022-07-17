@@ -1,3 +1,5 @@
+import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css";
 import NotificationButton from '../NotificationButton'
 import './styles.css'
 function SalesCard() {
@@ -6,18 +8,18 @@ function SalesCard() {
             <h2 className="dsmeta-sales-title" > Vendas</h2 >
             <div>
                 <div className="dsmeta-form-control-container">
-                    <input
+                    <DatePicker
+                        selected={new Date()}
+                        onChange={(date: Date) => { }}
                         className="dsmeta-form-control"
-                        type="text"
-                        value="01/02/2022"
-                    />
+                        dateFormat="dd/MM/yyyy" />
                 </div>
                 <div className="dsmeta-form-control-container">
-                    <input
+                    <DatePicker
+                        selected={new Date()}
+                        onChange={(date: Date) => { }}
                         className="dsmeta-form-control"
-                        type="text"
-                        value="30/04/2022"
-                    />
+                        dateFormat="dd/MM/yyyy" />
                 </div >
             </div >
             <div>
@@ -43,8 +45,8 @@ function SalesCard() {
                             <td>R$ 55300.00</td>
                             <td>
                                 <div className="dsmeta-btn-container">
-                                    <NotificationButton/>
-                                    </div>
+                                    <NotificationButton />
+                                </div>
                             </td >
                         </tr >
                         <tr>
@@ -56,7 +58,7 @@ function SalesCard() {
                             <td>R$ 55300.00</td>
                             <td>
                                 <div className="dsmeta-btn-container">
-                                   <NotificationButton/>
+                                    <NotificationButton />
                                 </div >
                             </td >
                         </tr >
